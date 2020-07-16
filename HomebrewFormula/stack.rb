@@ -3,16 +3,16 @@ class Stack < Formula
   desc "A support tool for use with Terraform stacks, Azure DevOps build pipelines, and GitHub projects/repos.
 "
   homepage "https://github.com/jlucktay/stack"
-  version "0.10.0"
+  version "0.10.1"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/jlucktay/stack/releases/download/v0.10.0/stack_0.10.0_Darwin_x86_64.tar.gz"
-    sha256 "5d829558b9e5da73fda54172d5f4b0b08b2f5017848562eb3a5c1d43c33fbd63"
+    url "https://github.com/jlucktay/stack/releases/download/v0.10.1/stack_0.10.1_Darwin_x86_64.tar.gz"
+    sha256 "bed9bf669ff31ec38fbef151bdb1572df4d63cc1998332c4d54afee88d3584ef"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/jlucktay/stack/releases/download/v0.10.0/stack_0.10.0_Linux_x86_64.tar.gz"
-      sha256 "7d398b2e103b35b4a4a86070ee077bb14d60196da166b41dfa30ecd32de49ee6"
+      url "https://github.com/jlucktay/stack/releases/download/v0.10.1/stack_0.10.1_Linux_x86_64.tar.gz"
+      sha256 "2ba378ab570aa6dee8d2d0419c0eb73ce48fbc18affbfc79cca333fc3034994b"
     end
   end
 
@@ -26,8 +26,6 @@ class Stack < Formula
   def caveats; <<~EOS
     Please see the README for usage instructions:
     https://github.com/jlucktay/stack/blob/master/README.md
-    
-    Bash completions installed to /usr/local/etc/bash_completion.d/
   EOS
   end
 end
