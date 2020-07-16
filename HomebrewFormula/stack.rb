@@ -2,16 +2,16 @@
 class Stack < Formula
   desc "A support tool for use with Terraform stacks, Azure DevOps build pipelines, and GitHub projects/repos."
   homepage "https://github.com/jlucktay/stack"
-  version "0.9.0"
+  version "0.9.3"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/jlucktay/stack/releases/download/v0.9.0/stack_0.9.0_Darwin_x86_64.tar.gz"
-    sha256 "2829a3c9688321d665264297336b75bdaaba5fe60100440b8eac024e996cfc7a"
+    url "https://github.com/jlucktay/stack/releases/download/v0.9.3/stack_0.9.3_Darwin_x86_64.tar.gz"
+    sha256 "58f42e65d36934c1e9e3ede437b17d6d21507da7c60da3489a27358f8e7b849d"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/jlucktay/stack/releases/download/v0.9.0/stack_0.9.0_Linux_x86_64.tar.gz"
-      sha256 "90fea3a017511541293a38f8db3e5a71d81023017b6e954f868e025d23d63f47"
+      url "https://github.com/jlucktay/stack/releases/download/v0.9.3/stack_0.9.3_Linux_x86_64.tar.gz"
+      sha256 "cae5c9ec553f1975f1d63bb96918419978f5604a09246c4ed617e4ccef952be8"
     end
   end
 
