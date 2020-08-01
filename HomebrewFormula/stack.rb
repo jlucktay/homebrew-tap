@@ -3,16 +3,16 @@ class Stack < Formula
   desc "A support tool for use with Terraform stacks, Azure DevOps build pipelines, and GitHub projects/repos.
 "
   homepage "https://github.com/jlucktay/stack"
-  version "0.10.3"
+  version "0.11.0"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/jlucktay/stack/releases/download/v0.10.3/stack_0.10.3_Darwin_x86_64.tar.gz"
-    sha256 "d30305ab9cc44e9bc512a147a7a288f94c351555aacb2a79fdd75afd7e9cfc56"
+    url "https://github.com/jlucktay/stack/releases/download/v0.11.0/stack_0.11.0_Darwin_x86_64.tar.gz"
+    sha256 "355fd565fc0c9ffb360eeeb2c8a605700d7394d538a550818de3ffb2295749cd"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/jlucktay/stack/releases/download/v0.10.3/stack_0.10.3_Linux_x86_64.tar.gz"
-      sha256 "2c16a463618cb9055a6837ce82fcd22d16e9f76c5018be53ef33066a36d016c1"
+      url "https://github.com/jlucktay/stack/releases/download/v0.11.0/stack_0.11.0_Linux_x86_64.tar.gz"
+      sha256 "b6f18f04475b581e94c3e2f9f4a84043a7d66d4c58a93e19bba71f300c2f6b20"
     end
   end
 
@@ -27,5 +27,9 @@ class Stack < Formula
     Please see the README for usage instructions:
     https://github.com/jlucktay/stack/blob/master/README.md
   EOS
+  end
+
+  test do
+    system "#{bin}/stack"
   end
 end
