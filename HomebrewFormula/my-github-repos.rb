@@ -6,21 +6,21 @@ class MyGithubRepos < Formula
   desc "GraphQL-based tool to fetch GitHub repos sorted by creation date
 "
   homepage "https://github.com/jlucktay/my-github-repos"
-  version "0.1.1"
+  version "0.2.0"
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/jlucktay/my-github-repos/releases/download/v0.1.1/my-github-repos_0.1.1_Darwin_arm64.tar.gz"
-      sha256 "9b4bde16b9f57f25655edb50d25237a5252938f9fc88704396b960c7281372d5"
+    if Hardware::CPU.intel?
+      url "https://github.com/jlucktay/my-github-repos/releases/download/v0.2.0/my-github-repos_0.2.0_Darwin_x86_64.tar.gz"
+      sha256 "a458b69855b7c1057a0c2ee0415581ee7c00302a478dac5257d13d8e10ee5666"
 
       def install
         bin.install "my-github-repos"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/jlucktay/my-github-repos/releases/download/v0.1.1/my-github-repos_0.1.1_Darwin_x86_64.tar.gz"
-      sha256 "d6530ec46f27a03f4550660086225edc865d04a0c238b671aa1dc21f75e5524d"
+    if Hardware::CPU.arm?
+      url "https://github.com/jlucktay/my-github-repos/releases/download/v0.2.0/my-github-repos_0.2.0_Darwin_arm64.tar.gz"
+      sha256 "1149ad37b232d2c1a03d04fcd67dc401f70a5b5240d990bba62c4eb478aaa78c"
 
       def install
         bin.install "my-github-repos"
@@ -30,16 +30,16 @@ class MyGithubRepos < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/jlucktay/my-github-repos/releases/download/v0.1.1/my-github-repos_0.1.1_Linux_arm64.tar.gz"
-      sha256 "ee40ab73e7b098801d92bbb2273284f65a962834ceaffea2506e572ad4c3a971"
+      url "https://github.com/jlucktay/my-github-repos/releases/download/v0.2.0/my-github-repos_0.2.0_Linux_arm64.tar.gz"
+      sha256 "fbefd0642a3b4e47b859894408e68bc2846edcebfe34bd944cfbbaeb4f7d7e42"
 
       def install
         bin.install "my-github-repos"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/jlucktay/my-github-repos/releases/download/v0.1.1/my-github-repos_0.1.1_Linux_x86_64.tar.gz"
-      sha256 "c4ea3e9cf61495d56af5f8126c3151fca73bcea17f11b6458ee791ca7e175b90"
+      url "https://github.com/jlucktay/my-github-repos/releases/download/v0.2.0/my-github-repos_0.2.0_Linux_x86_64.tar.gz"
+      sha256 "f2be0c602ac477e0c7cb2583d5989b2f7f25ff05fc47ae324e20f4d01f8e9b2c"
 
       def install
         bin.install "my-github-repos"
