@@ -6,21 +6,21 @@ class MyGithubRepos < Formula
   desc "GraphQL-based tool to fetch GitHub repos sorted by creation date
 "
   homepage "https://github.com/jlucktay/my-github-repos"
-  version "0.3.0"
+  version "0.3.2"
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/jlucktay/my-github-repos/releases/download/v0.3.0/my-github-repos_0.3.0_Darwin_arm64.tar.gz"
-      sha256 "fed2a10c41222bb1168100ae41682fc9a45b848353c30560ff06a68c9341283b"
+    if Hardware::CPU.intel?
+      url "https://github.com/jlucktay/my-github-repos/releases/download/v0.3.2/my-github-repos_0.3.2_Darwin_x86_64.tar.gz"
+      sha256 "b19358f487bcb1612563f2b31fb9f5e7bc8e8fbfd9eba49e55b072030eaf319e"
 
       def install
         bin.install "my-github-repos"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/jlucktay/my-github-repos/releases/download/v0.3.0/my-github-repos_0.3.0_Darwin_x86_64.tar.gz"
-      sha256 "040852046bb3499966fe99a6d28d46ff1b064f94d26f0dfae1ec5f374cbcc8cd"
+    if Hardware::CPU.arm?
+      url "https://github.com/jlucktay/my-github-repos/releases/download/v0.3.2/my-github-repos_0.3.2_Darwin_arm64.tar.gz"
+      sha256 "590b03b3551c1d4d942487c15c844ac1b2bea0ad96e63480a324b682d2c636e2"
 
       def install
         bin.install "my-github-repos"
@@ -29,17 +29,17 @@ class MyGithubRepos < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/jlucktay/my-github-repos/releases/download/v0.3.0/my-github-repos_0.3.0_Linux_x86_64.tar.gz"
-      sha256 "fe618d56a5fb9cb95ed2f59d86253f74839dafcc9cac9d701504bc033d056859"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/jlucktay/my-github-repos/releases/download/v0.3.2/my-github-repos_0.3.2_Linux_arm64.tar.gz"
+      sha256 "7df6e0c242e042c3bb4c76fb15966a2456262ba06172ccf704a45ac51b674d23"
 
       def install
         bin.install "my-github-repos"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/jlucktay/my-github-repos/releases/download/v0.3.0/my-github-repos_0.3.0_Linux_arm64.tar.gz"
-      sha256 "f7bdce8a17838264039cb3150c1b3237d1b595959a8bd8ff87417eb1a04ce752"
+    if Hardware::CPU.intel?
+      url "https://github.com/jlucktay/my-github-repos/releases/download/v0.3.2/my-github-repos_0.3.2_Linux_x86_64.tar.gz"
+      sha256 "ee74fe9772f3f458e8468486f4020405f151f2cc6cfb45d69b97c2e12f972a46"
 
       def install
         bin.install "my-github-repos"
@@ -47,10 +47,11 @@ class MyGithubRepos < Formula
     end
   end
 
-  def caveats; <<~EOS
-    Please see the README for usage instructions:
-    https://github.com/jlucktay/my-github-repos/blob/main/README.md
-  EOS
+  def caveats
+    <<~EOS
+      Please see the README for usage instructions:
+      https://github.com/jlucktay/my-github-repos/blob/main/README.md
+    EOS
   end
 
   test do
