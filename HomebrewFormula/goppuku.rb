@@ -6,21 +6,21 @@ class Goppuku < Formula
   desc "Have a VM put itself down if a given condition is met
 "
   homepage "https://github.com/jlucktay/goppuku"
-  version "0.6.6"
+  version "0.6.5"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/jlucktay/goppuku/releases/download/v0.6.6/goppuku_0.6.6_Darwin_x86_64.tar.gz"
-      sha256 "5fd2ef8a0e4b80280e3baef5a10f298e223d3908eda054a4e848d4fd715770cc"
+      url "https://github.com/jlucktay/goppuku/releases/download/v0.6.5/goppuku_0.6.5_Darwin_x86_64.tar.gz"
+      sha256 "53053d32ac17b91e45402619cd9f514db56ae8deb029bf7c78bc67bfc508fd4c"
 
       def install
         bin.install "goppuku"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/jlucktay/goppuku/releases/download/v0.6.6/goppuku_0.6.6_Darwin_arm64.tar.gz"
-      sha256 "969d82b1a1fb887d7469b017af855a0d0028ffb7c94b67ae3b0c3bbd77c56424"
+      url "https://github.com/jlucktay/goppuku/releases/download/v0.6.5/goppuku_0.6.5_Darwin_arm64.tar.gz"
+      sha256 "e562af2403a53a710e67a7f8a9aacd262d8dca2a5661b751f3de0ab2e43e2a6b"
 
       def install
         bin.install "goppuku"
@@ -30,16 +30,16 @@ class Goppuku < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/jlucktay/goppuku/releases/download/v0.6.6/goppuku_0.6.6_Linux_arm64.tar.gz"
-      sha256 "6ad9badd96c36a32a3b68b7a9f3f8463b4cf466b4628f9916fc017d946f10359"
+      url "https://github.com/jlucktay/goppuku/releases/download/v0.6.5/goppuku_0.6.5_Linux_arm64.tar.gz"
+      sha256 "ba4cf7126b02706bd3ba57c30d090683e54f6f0afac569cbbc789711a22a96f9"
 
       def install
         bin.install "goppuku"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/jlucktay/goppuku/releases/download/v0.6.6/goppuku_0.6.6_Linux_x86_64.tar.gz"
-      sha256 "eb5380018fb9c26b54fc77ef234a0ea7a17f8d99fc1ff97315c8db00f3e63461"
+      url "https://github.com/jlucktay/goppuku/releases/download/v0.6.5/goppuku_0.6.5_Linux_x86_64.tar.gz"
+      sha256 "654183fce99486116d068ec461503144e689a64cc66b10f8519570871d86a461"
 
       def install
         bin.install "goppuku"
